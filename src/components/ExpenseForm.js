@@ -28,6 +28,7 @@ export default class ExpenseForm extends Component {
 	onAmountChange = (e) => {
 		const amount = e.target.value;
 		if(!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
+			console.log(amount);
 			this.setState(()=> ({amount}));
 		}
 		
@@ -59,7 +60,7 @@ export default class ExpenseForm extends Component {
 			this.props.onSubmit({
 				description: this.state.description,
 				createdAt:this.state.createdAt.valueOf(),
-				amount: parseFloat(this.state.amount, 10)*100,
+				amount: parseFloat(this.state.amount, 10),
 				notes: this.state.notes
 			});
 			//console.log('submitted')

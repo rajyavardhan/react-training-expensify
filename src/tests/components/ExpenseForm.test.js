@@ -71,7 +71,7 @@ test(`Should call on submit form for valid form submission`, () => {
 	expect(onSubmitSpy).toHaveBeenLastCalledWith({
 		description: expenses[0].description,
 		notes: expenses[0].notes,
-		amount: expenses[0].amount*100,
+		amount: parseInt(expenses[0].amount),
 		createdAt: expenses[0].createdAt
 	});
 });

@@ -7,9 +7,9 @@ test(`Should render ExpensesListItem correctly`, () => {
 	const wrapper = shallow(<ExpensesListItem {...expenses[1]} />);
 	expect(wrapper).toMatchSnapshot();
 });
-test(`Should render only two span items`, () => {
+test(`Should render one paragraph items`, () => {
 	const wrapper = shallow(<ExpensesListItem {...expenses[1]}/>);
-	expect(wrapper.find('span').length).toBe(2);
+	expect(wrapper.find('p').length).toBe(1);
 });
 test(`Should render the span text as 109500`, () => {
 	const wrapper = shallow(<ExpensesListItem {...expenses[1]}/>);
