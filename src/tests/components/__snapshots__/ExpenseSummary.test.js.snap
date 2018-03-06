@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render expenses summary correctly with no data 1`] = `
+<div>
+  Viewing 0 totalling 0
+</div>
+`;
+
+exports[`Should render expenses summary correctly with some data 1`] = `
+<div>
+  Viewing 3 totalling 6
+</div>
+`;
